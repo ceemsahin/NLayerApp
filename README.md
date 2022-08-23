@@ -1,6 +1,6 @@
 # NLayerApp
 ## Katmanlı mimari üzerinde tasarlanmış bir yapıdır.Hem Apı ve hemde Mvc projesi olarak kodlanmıştır
-### Kullanılan Teknolojiler ve yapılar 
+### Kullanılan Teknolojiler ve yaklaşımlar
 #### N katmanlı mimari 
 #### AutoFac  
 #### FluentValidation
