@@ -2,9 +2,10 @@
 ## Katmanlı mimari üzerinde tasarlanmış bir yapıdır.Hem Apı ve hemde Mvc projesi olarak kodlanmıştır
 ### Kullanılan Teknolojiler ve yapılar 
 #### N katmanlı mimari 
-#### AutoFac nedir 
-#### FluentValidatio
+#### AutoFac  
+#### FluentValidation
 #### UnitOfWork
 #### AutoMapper 
 #### Entity Framework 
+#### MSSqlServer 
 #### Global hata yönetimi
