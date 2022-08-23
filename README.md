@@ -7,5 +7,8 @@
 #### UnitOfWork
 #### AutoMapper 
 #### Entity Framework 
+#### InMemoryCache
+#### Repository Design Pattern
+#### Solid Prensipleri
 #### MSSqlServer 
 #### Global hata yönetimi
