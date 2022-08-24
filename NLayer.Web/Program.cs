@@ -9,6 +9,7 @@ using NLayer.Service.Services;
 using NLayer.Service.Validations;
 using NLayer.Web.Filters;
 using NLayer.Web.Modules;
+using NLayer.Web.Services;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +19,7 @@ builder.Services.AddControllersWithViews().AddFluentValidation(x => x.RegisterVa
 builder.Services.AddAutoMapper(typeof(MapProfile));
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Services.AddScoped<IProductService, ProductServiceNoWithCaching>();
+
 builder.Services.AddDbContext<AppDbContext>(x =>
 {
     x.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection"), options =>
@@ -26,6 +28,17 @@ builder.Services.AddDbContext<AppDbContext>(x =>
     });
 });
 builder.Host.ConfigureContainer<Autofac.ContainerBuilder>(containerBuilder => containerBuilder.RegisterModule(new RepoServiceModule()));
+
+
+builder.Services.AddHttpClient<ProductApýService>(opt =>
+{
+    opt.BaseAddress = new Uri(builder.Configuration["BaseUrl"]);
+});
+builder.Services.AddHttpClient<CategoryApýService>(opt =>
+{
+    opt.BaseAddress = new Uri(builder.Configuration["BaseUrl"]);
+});
+
 
 builder.Services.AddScoped(typeof(NotFoundFilter<>));
 

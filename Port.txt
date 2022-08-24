@@ -1,0 +1,5 @@
+Apý => https://localhost:7211/
+Apý => http://localhost:5211
+
+MVC => https://localhost:7129/
+MVC => http://localhost:5129

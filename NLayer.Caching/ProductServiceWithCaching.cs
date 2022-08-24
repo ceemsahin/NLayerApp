@@ -86,7 +86,6 @@ namespace NLayer.Caching
 
 
 
-
             var products = _memoryCache.Get<IEnumerable<Product>>(CacheProductKey);
 
 
