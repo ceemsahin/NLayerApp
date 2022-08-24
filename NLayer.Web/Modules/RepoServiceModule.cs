@@ -1,5 +1,4 @@
 ﻿using Autofac;
-using NLayer.Caching;
 using NLayer.Core.Repositories;
 using NLayer.Core.Services;
 using NLayer.Core.UnitOfWorks;
@@ -10,7 +9,7 @@ using NLayer.Service.Mapping;
 using NLayer.Service.Services;
 using System.Reflection;
 using Module = Autofac.Module;
-namespace NLayer.API.Modules
+namespace NLayer.Web.Modules
 {
 
     //Program.cs dosyasını temiz tutmak için yazdık.
@@ -40,11 +39,6 @@ namespace NLayer.API.Modules
 
             builder.RegisterAssemblyTypes(apiAssembly, repoAssembly, serviceAssembly)
                 .Where(x => x.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerLifetimeScope();
-
-
-
-            builder.RegisterType<ProductServiceWithCaching>().As<IProductService>();
-
 
         }
 
